@@ -17,35 +17,34 @@
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
 
+  
+  
     
 
   
+
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Examples" href="examples.html" />
     <link rel="prev" title="Structure Arrays" href="structs.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
+
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
           
 
           
@@ -84,6 +83,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Functions</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#plotting">Plotting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#opening-a-visualization">Opening a visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-sammim-examples">Running SAMMIM examples</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
@@ -153,7 +153,7 @@
             
   <div class="section" id="functions">
 <h1>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h1>
-<p>There are two main user functions for rendering and plotting SAMMI visualizations. These are:</p>
+<p>There are three main user functions for rendering and plotting SAMMI visualizations. These are:</p>
 <div class="section" id="plotting">
 <h2>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">¶</a></h2>
 <p>The function <code class="code docutils literal notranslate"><span class="pre">sammi</span></code> is used to plot SAMMI visualizations in combination with the SAMMI structured arrays. The function definition is:</p>
@@ -184,7 +184,11 @@
 </div>
 <div class="section" id="opening-a-visualization">
 <h2>Opening a visualization<a class="headerlink" href="#opening-a-visualization" title="Permalink to this headline">¶</a></h2>
-<p>The function <code class="code docutils literal notranslate"><span class="pre">openSammi</span></code> is used for opening previously drawn visualizations. It takes a single input: a string defining a previously drawn map html file name.</p>
+<p>The function <code class="code docutils literal notranslate"><span class="pre">openSammi</span></code> is used to open previously drawn visualizations. It takes a single input: a string defining a previously drawn map html file name. For instance, <code class="code docutils literal notranslate"><span class="pre">openSammi('index_load.html')</span></code> or <code class="code docutils literal notranslate"><span class="pre">openSammi('index_load')</span></code> opens the default html file to which SAMMIM writes metabolic maps.</p>
+</div>
+<div class="section" id="running-sammim-examples">
+<h2>Running SAMMIM examples<a class="headerlink" href="#running-sammim-examples" title="Permalink to this headline">¶</a></h2>
+<p>The SAMMIM examples described in the next section are available in the <code class="code docutils literal notranslate"><span class="pre">testSammi</span></code> function. To try the described examples run <code class="code docutils literal notranslate"><span class="pre">testSammi(n)</span></code> where <code class="code docutils literal notranslate"><span class="pre">n</span></code> ranges from zero to eleven referring to the example number. To visualize the code for each example run <code class="code docutils literal notranslate"><span class="pre">edit</span> <span class="pre">testSammi</span></code> from the MATLAB command window.</p>
 </div>
 </div>
 
@@ -199,7 +203,7 @@
         <a href="examples.html" class="btn btn-neutral float-right" title="Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="structs.html" class="btn btn-neutral float-left" title="Structure Arrays" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="structs.html" class="btn btn-neutral" title="Structure Arrays" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -225,16 +229,35 @@
   
 
 
+  
+
+    
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

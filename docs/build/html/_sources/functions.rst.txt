@@ -1,6 +1,6 @@
 Functions
 ==============
-There are two main user functions for rendering and plotting SAMMI visualizations. These are:
+There are three main user functions for rendering and plotting SAMMI visualizations. These are:
 
 Plotting
 --------------
@@ -25,4 +25,8 @@ The function inputs are as follows:
 
 Opening a visualization
 --------------------------
-The function :code:`openSammi` is used for opening previously drawn visualizations. It takes a single input: a string defining a previously drawn map html file name.
+The function :code:`openSammi` is used to open previously drawn visualizations. It takes a single input: a string defining a previously drawn map html file name. For instance, :code:`openSammi('index_load.html')` or :code:`openSammi('index_load')` opens the default html file to which SAMMIM writes metabolic maps.
+
+Running SAMMIM examples
+-------------------------------
+The SAMMIM examples described in the next section are available in the :code:`testSammi` function. To try the described examples run :code:`testSammi(n)` where :code:`n` ranges from zero to eleven referring to the example number. To visualize the code for each example run :code:`edit testSammi` from the MATLAB command window.

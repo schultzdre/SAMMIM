@@ -1,9 +1,8 @@
 Examples
 ==============
-Install cobra toolbox and init it.
 
 Here we provide several simple examples for the use of SAMMIM. Each example is supposed to be more complex than the next, and is intended to exemplify as many different functionalities of SAMMIM as possible. To get started, install the COBRA toolbox as described in the documentation `here
-<https://opencobra.github.io/cobratoolbox/stable/installation.html>`_. The examples described here are available through SAMMIM in the :code:`testSammi` function.
+<https://opencobra.github.io/cobratoolbox/stable/installation.html>`_. The examples described here are available through SAMMIM in the :code:`testSammi` function. To view the code for each example in MATLAB type :code:`edit testSammi`. To run each example run :code:`testSammi(n)` where :code:`n` ranges from zero to eleven, referring to the example number defined here.
 
 Make sure the COBRA toolbox is initialized and load variable to be used throughout these examples:
 
@@ -16,8 +15,8 @@ Make sure the COBRA toolbox is initialized and load variable to be used througho
     %Get SAMMIM folder
     sammipath = strrep(which('sammi'),'\sammi.m','');
 
-Plot entire model
------------------------
+0. Plot entire model
+--------------------------
 To plot the entire model simply call :code:`sammi` on the COBRA model. This is not advisable for medium to large models as the visualization may be too large to render.
 
 .. code-block:: matlab
@@ -27,9 +26,9 @@ To plot the entire model simply call :code:`sammi` on the COBRA model. This is n
     %Plot
     sammi(model)
 
-Divide the model into subgraphs using model annotation
-----------------------------------------------------------
-Maps can be divided into subgraphs using model annotation. For instance, users can plot a subgraph for each annotated reaction subsystem:
+1-2. Divide the model into subgraphs using model annotation
+--------------------------------------------------------------------
+1. Maps can be divided into subgraphs using model annotation. For instance, users can plot a subgraph for each annotated reaction subsystem:
 
 .. code-block:: matlab
 
@@ -38,7 +37,7 @@ Maps can be divided into subgraphs using model annotation. For instance, users c
     %Plot a subgraph for each subsystem
     sammi(modelR204,'subSystems')
 
-Or plot a map for each cellular compartment:
+2. Or plot a map for each cellular compartment:
 
 .. code-block:: matlab
 
@@ -47,8 +46,8 @@ Or plot a map for each cellular compartment:
     #Plot
     sammi.plot(model,'compartment')
 
-Plot and visualize multiple maps
--------------------------------------
+3. Plot and visualize multiple maps
+-------------------------------------------------
 By default, SAMMI outputs the visualization to a file names :code:`index.load.html` in the package folder. Therefore, by default, every time a new visualization is generated this file is overwritten. The name of the output file can be changed, however, in order to not overwrite files. For instance:
 
 .. code-block:: matlab
@@ -67,8 +66,8 @@ By default, SAMMI outputs the visualization to a file names :code:`index.load.ht
     openSammi('index_load.html')
     openSammi('index_load2.html')
 
-Plot only user-defined reactions
------------------------------------------
+4. Plot only user-defined reactions
+------------------------------------------------
 For a quick visualization of a given group of reactions users can plot only certain reactions in a single graph.
 
 .. code-block:: matlab
@@ -83,8 +82,8 @@ For a quick visualization of a given group of reactions users can plot only cert
     %Plot only desired reactions
     sammi(model,dat);
 
-Shelve secondary metabolites on load
------------------------------------------
+5. Shelve secondary metabolites on load
+-------------------------------------------------
 In order to shelve secondary metabolites upon rendering the model, define the :code:`secondaries` input to the plot function. If this argument is defined, any metabolite, matching any of the defined regular expressions, will be shelved. These metabolites can be returned to the graph using the floating menu window.
 
 .. code-block:: matlab
@@ -103,7 +102,7 @@ In order to shelve secondary metabolites upon rendering the model, define the :c
     %Plot only desired reactions
     sammi(model,dat,[],secondaries);
 
-Plot multiple user-defined subgraphs
+6. Plot multiple user-defined subgraphs
 -----------------------------------------------
 Users can also plot multiple subgraphs with their defined reactions. To do so, define the Parser structured array for each subgraph:
 
@@ -121,9 +120,9 @@ Users can also plot multiple subgraphs with their defined reactions. To do so, d
     %Plot only desired reactions
     sammi(model,dat);
 
-Data mapping
-----------------
-Add data to plotted subgraphs. In this example we are generating random data and mapping it onto the desired reactions. Using the Parser structured array users can directly map data as reaction colors:
+7-8. Data mapping
+----------------------------
+7. Add data to plotted subgraphs. In this example we are generating random data and mapping it onto the desired reactions. Using the Parser structured array users can directly map data as reaction colors:
 
 .. code-block:: matlab
 
@@ -141,7 +140,7 @@ Add data to plotted subgraphs. In this example we are generating random data and
     %Plot only desired reactions
     sammi(model,dat);
 
-Alternatively, users can map data onto the map using the Data structured array. The following example maps five sets of random data, each in a different way, with five conditions each.
+8. Alternatively, users can map data onto the map using the Data structured array. The following example maps five sets of random data, each in a different way, with five conditions each.
 
 .. code-block:: matlab
 
@@ -177,8 +176,8 @@ Alternatively, users can map data onto the map using the Data structured array. 
     %Plot dividing up by subsystems
     sammi(model,'subSystems',dat,secondaries)
 
-Change map upon load
------------------------------
+9. Change map upon load
+-----------------------------------
 SAMMI options also allow users to change visualization parameters upon loading the model. This can be done by adding JavaScript code to the end of the visualization. To use this advanced feature users need to be familiar with JavaScript and need to familiarize themselves with the SAMMI visualization html layout. The following code loads the previous map, changes the visualization to the Citric Acid Cycle subgraph, and changes the colorscale upon loading.
 
 .. code-block:: matlab
@@ -217,8 +216,8 @@ SAMMI options also allow users to change visualization parameters upon loading t
     %Plot dividing up by subsystems
     sammi(model,'subSystems',dat,secondaries,options)
 
-Load Existing Map
------------------------
+10. Load Existing Map
+---------------------------
 SAMMI makes it easy for users to share curated maps through the SAMMI Json export. To load existing maps, pass the file path to the :code:`parser` argument. The following example load a map included with the SAMMIM folder:
 
 .. code-block:: matlab
@@ -230,8 +229,8 @@ SAMMI makes it easy for users to share curated maps through the SAMMI Json expor
     %Load existing model
     sammi(model,[sammipath '\demo.json'],[],[],options)
 
-Type-III Pathways
-------------------------
+11. Type-III Pathways
+----------------------------
 Type-III pathways are thermodynamically infeasible, flux-balanced distributions that do not include exchange reactions. In this example we use SAMMI to visualize type-III pathways in the iJO1366 model. We first block all exchange reactions, then perform FVA to determine which reactions remain active. We then loop through the active reactions using FBA to determine loops where they are active.
 
 .. code-block:: matlab

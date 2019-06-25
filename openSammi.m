@@ -11,12 +11,14 @@ function openSammi(htmlName)
     %Set default
     if nargin < 1
         htmlName = 'index_load.html';
+    elseif isempty(regexp(htmlName,'\.html$'))
+        htmlName = [htmlName '.html'];
     end
     %Get SAMMIM folder
     sammipath = strrep(which('sammi'),'sammi.m','');
     %Define path
     filename = [sammipath htmlName];
-    if ~isfile(filename)
+    if ~exist(filename,'file')
         warning(['Could not locate file ' filename])
         return
     end

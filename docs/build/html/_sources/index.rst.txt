@@ -12,7 +12,7 @@ SAMMIM is a tool for visualizing metabolic networks and metabolic network simula
 Installation and Usage
 ===================================
 To use this tool simply add the `SAMMIM
-<https://github.com/schultzdre/SAMMIM>`_ folder to your MATLAB path. There is no need to add its subfolders. For a short description of how to use the plotting function type:
+<https://github.com/MD-Anderson-Bioinformatics/SAMMI>`_ folder to your MATLAB path. There is no need to add its subfolders. For a short description of how to use the plotting function type:
 
 .. code-block:: matlab
 

@@ -41,10 +41,14 @@ To plot the entire model simply call :code:`sammi` on the COBRA model. This is n
 
 .. code-block:: matlab
 
-    #Get sample model to plot
-    model = cobra.test.create_test_model("textbook")
-    #Plot
-    sammi.plot(model,'compartment')
+    %Get sample model to plot
+    load([CBTDIR '/test/models/mat/ecoli_core_model.mat']);
+    %Make compartment vector
+    comp = regexp(model.mets,'\[(.)\]$','tokens');
+    comp = vertcat(comp{:});
+    model.compartment = vertcat(comp{:});
+    %Plot
+    sammi(model,'compartment')
 
 3. Plot and visualize multiple maps
 -------------------------------------------------

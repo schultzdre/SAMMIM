@@ -193,10 +193,14 @@
 <ol class="arabic simple" start="2">
 <li>Or plot a map for each cellular compartment:</li>
 </ol>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span>#<span class="n">Get</span> <span class="n">sample</span> <span class="n">model</span> <span class="n">to</span> <span class="n">plot</span>
-<span class="n">model</span> <span class="p">=</span> <span class="n">cobra</span><span class="p">.</span><span class="n">test</span><span class="p">.</span><span class="n">create_test_model</span><span class="p">(</span>&quot;<span class="n">textbook</span>&quot;<span class="p">)</span>
-#<span class="n">Plot</span>
-<span class="n">sammi</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="s">&#39;compartment&#39;</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%Get sample model to plot</span>
+<span class="n">load</span><span class="p">([</span><span class="n">CBTDIR</span> <span class="s">&#39;/test/models/mat/ecoli_core_model.mat&#39;</span><span class="p">]);</span>
+<span class="c">%Make compartment vector</span>
+<span class="n">comp</span> <span class="p">=</span> <span class="n">regexp</span><span class="p">(</span><span class="n">model</span><span class="p">.</span><span class="n">mets</span><span class="p">,</span><span class="s">&#39;\[(.)\]$&#39;</span><span class="p">,</span><span class="s">&#39;tokens&#39;</span><span class="p">);</span>
+<span class="n">comp</span> <span class="p">=</span> <span class="n">vertcat</span><span class="p">(</span><span class="n">comp</span><span class="p">{:});</span>
+<span class="n">model</span><span class="p">.</span><span class="n">compartment</span> <span class="p">=</span> <span class="n">vertcat</span><span class="p">(</span><span class="n">comp</span><span class="p">{:});</span>
+<span class="c">%Plot</span>
+<span class="n">sammi</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="s">&#39;compartment&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

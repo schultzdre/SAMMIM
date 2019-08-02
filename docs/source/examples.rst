@@ -115,7 +115,6 @@ Users can also plot multiple subgraphs with their defined reactions. To do so, d
     %Load model
     load([CBTDIR '/test/models/mat/ecoli_core_model.mat'])
     %Get reactions to plot
-    dat = struct;
     dat(1).name = 'TCA Cycle';
     dat(1).rxns = {'ACONTa';'ACONTb';'AKGDH';'CS';'FUM';'ICDHyr';'MDH';'SUCOAS'};
     dat(2).name = 'Glycolysis';
@@ -134,7 +133,6 @@ Users can also plot multiple subgraphs with their defined reactions. To do so, d
     %Load model
     load([CBTDIR '/test/models/mat/ecoli_core_model.mat'])
     %Get reactions to plot
-    dat = struct;
     dat(1).name = 'TCA Cycle';
     dat(1).rxns = {'ACONTa';'ACONTb';'AKGDH';'CS';'FUM';'ICDHyr';'MDH';'SUCOAS'};
     dat(2).name = 'Glycolysis';
@@ -165,7 +163,6 @@ Users can also plot multiple subgraphs with their defined reactions. To do so, d
     mettbl = array2table(mettbl,'VariableNames',sprintfc('condition_%d',1:n),...
         'RowNames',model.mets);
     %Make struct
-    dat = struct;
     dat(1).type = {'rxns' 'color'};
     dat(1).data = rxntbl;
     dat(2).type = {'rxns' 'size'};
@@ -199,7 +196,6 @@ SAMMI options also allow users to change visualization parameters upon loading t
     rxntbl = array2table(rxntbl,'VariableNames',sprintfc('condition_%d',1:n),...
         'RowNames',model.rxns);
     %Make struct
-    dat = struct;
     dat(1).type = {'rxns' 'color'};
     dat(1).data = rxntbl;
     %Define secondaries
@@ -260,7 +256,6 @@ Type-III pathways are thermodynamically infeasible, flux-balanced distributions 
     %Parse
     count = 0;
     %For each positive flux
-    dat = struct;
     for id = find(fluxmax)'
         %Set as objective
         model = changeObjective(model,model.rxns{id},1);

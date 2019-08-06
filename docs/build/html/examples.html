@@ -17,33 +17,34 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="Functions" href="functions.html" /> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -263,6 +264,7 @@
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%Load model</span>
 <span class="n">load</span><span class="p">([</span><span class="n">CBTDIR</span> <span class="s">&#39;/test/models/mat/ecoli_core_model.mat&#39;</span><span class="p">])</span>
 <span class="c">%Get reactions to plot</span>
+<span class="n">dat</span> <span class="p">=</span> <span class="n">struct</span><span class="p">;</span>
 <span class="n">dat</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">name</span> <span class="p">=</span> <span class="s">&#39;TCA Cycle&#39;</span><span class="p">;</span>
 <span class="n">dat</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">rxns</span> <span class="p">=</span> <span class="p">{</span><span class="s">&#39;ACONTa&#39;</span><span class="p">;</span><span class="s">&#39;ACONTb&#39;</span><span class="p">;</span><span class="s">&#39;AKGDH&#39;</span><span class="p">;</span><span class="s">&#39;CS&#39;</span><span class="p">;</span><span class="s">&#39;FUM&#39;</span><span class="p">;</span><span class="s">&#39;ICDHyr&#39;</span><span class="p">;</span><span class="s">&#39;MDH&#39;</span><span class="p">;</span><span class="s">&#39;SUCOAS&#39;</span><span class="p">};</span>
 <span class="n">dat</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="n">name</span> <span class="p">=</span> <span class="s">&#39;Glycolysis&#39;</span><span class="p">;</span>
@@ -282,6 +284,7 @@
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%Load model</span>
 <span class="n">load</span><span class="p">([</span><span class="n">CBTDIR</span> <span class="s">&#39;/test/models/mat/ecoli_core_model.mat&#39;</span><span class="p">])</span>
 <span class="c">%Get reactions to plot</span>
+<span class="n">dat</span> <span class="p">=</span> <span class="n">struct</span><span class="p">;</span>
 <span class="n">dat</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">name</span> <span class="p">=</span> <span class="s">&#39;TCA Cycle&#39;</span><span class="p">;</span>
 <span class="n">dat</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">rxns</span> <span class="p">=</span> <span class="p">{</span><span class="s">&#39;ACONTa&#39;</span><span class="p">;</span><span class="s">&#39;ACONTb&#39;</span><span class="p">;</span><span class="s">&#39;AKGDH&#39;</span><span class="p">;</span><span class="s">&#39;CS&#39;</span><span class="p">;</span><span class="s">&#39;FUM&#39;</span><span class="p">;</span><span class="s">&#39;ICDHyr&#39;</span><span class="p">;</span><span class="s">&#39;MDH&#39;</span><span class="p">;</span><span class="s">&#39;SUCOAS&#39;</span><span class="p">};</span>
 <span class="n">dat</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="n">name</span> <span class="p">=</span> <span class="s">&#39;Glycolysis&#39;</span><span class="p">;</span>
@@ -312,6 +315,7 @@
 <span class="n">mettbl</span> <span class="p">=</span> <span class="n">array2table</span><span class="p">(</span><span class="n">mettbl</span><span class="p">,</span><span class="s">&#39;VariableNames&#39;</span><span class="p">,</span><span class="n">sprintfc</span><span class="p">(</span><span class="s">&#39;condition_%d&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span><span class="p">),</span><span class="c">...</span>
     <span class="s">&#39;RowNames&#39;</span><span class="p">,</span><span class="n">model</span><span class="p">.</span><span class="n">mets</span><span class="p">);</span>
 <span class="c">%Make struct</span>
+<span class="n">dat</span> <span class="p">=</span> <span class="n">struct</span><span class="p">;</span>
 <span class="n">dat</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">type</span> <span class="p">=</span> <span class="p">{</span><span class="s">&#39;rxns&#39;</span> <span class="s">&#39;color&#39;</span><span class="p">};</span>
 <span class="n">dat</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">data</span> <span class="p">=</span> <span class="n">rxntbl</span><span class="p">;</span>
 <span class="n">dat</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="n">type</span> <span class="p">=</span> <span class="p">{</span><span class="s">&#39;rxns&#39;</span> <span class="s">&#39;size&#39;</span><span class="p">};</span>
@@ -344,6 +348,7 @@
 <span class="n">rxntbl</span> <span class="p">=</span> <span class="n">array2table</span><span class="p">(</span><span class="n">rxntbl</span><span class="p">,</span><span class="s">&#39;VariableNames&#39;</span><span class="p">,</span><span class="n">sprintfc</span><span class="p">(</span><span class="s">&#39;condition_%d&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span><span class="p">),</span><span class="c">...</span>
     <span class="s">&#39;RowNames&#39;</span><span class="p">,</span><span class="n">model</span><span class="p">.</span><span class="n">rxns</span><span class="p">);</span>
 <span class="c">%Make struct</span>
+<span class="n">dat</span> <span class="p">=</span> <span class="n">struct</span><span class="p">;</span>
 <span class="n">dat</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">type</span> <span class="p">=</span> <span class="p">{</span><span class="s">&#39;rxns&#39;</span> <span class="s">&#39;color&#39;</span><span class="p">};</span>
 <span class="n">dat</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">data</span> <span class="p">=</span> <span class="n">rxntbl</span><span class="p">;</span>
 <span class="c">%Define secondaries</span>
@@ -402,6 +407,7 @@
 <span class="c">%Parse</span>
 <span class="n">count</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="c">%For each positive flux</span>
+<span class="n">dat</span> <span class="p">=</span> <span class="n">struct</span><span class="p">;</span>
 <span class="k">for</span> <span class="n">id</span> <span class="p">=</span> <span class="nb">find</span><span class="p">(</span><span class="n">fluxmax</span><span class="p">)</span><span class="o">&#39;</span>
     <span class="c">%Set as objective</span>
     <span class="n">model</span> <span class="p">=</span> <span class="n">changeObjective</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="n">model</span><span class="p">.</span><span class="n">rxns</span><span class="p">{</span><span class="n">id</span><span class="p">},</span><span class="mi">1</span><span class="p">);</span>
@@ -447,7 +453,7 @@
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="functions.html" class="btn btn-neutral" title="Functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="functions.html" class="btn btn-neutral float-left" title="Functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -473,35 +479,16 @@
   
 
 
-  
-
-    
-    
-      <script type="text/javascript">
-          var DOCUMENTATION_OPTIONS = {
-              URL_ROOT:'./',
-              VERSION:'',
-              LANGUAGE:'None',
-              COLLAPSE_INDEX:false,
-              FILE_SUFFIX:'.html',
-              HAS_SOURCE:  true,
-              SOURCELINK_SUFFIX: '.txt'
-          };
-      </script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

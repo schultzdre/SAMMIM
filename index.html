@@ -381,6 +381,10 @@ with this program. If not, see <https://www.gnu.org/licenses/>.
            document.getElementById("dialog2").parentNode.style.left = "50px";
            document.getElementById("dialog2").parentNode.style.top = -window.innerHeight + 5 - document.getElementById("dialog").clientHeight + "px";
         });
+        
+        document.addEventListener("contextmenu",function(e){
+            e.preventDefault();    
+        },false);
 
         setTimeout(function(){
         setdisplay()

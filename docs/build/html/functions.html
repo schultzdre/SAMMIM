@@ -21,9 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -163,24 +164,20 @@
 </div>
 <p>The function inputs are as follows:</p>
 <ul>
-<li><p class="first"><strong>model</strong>: COBRA model to be visualized.</p>
-</li>
-<li><p class="first"><strong>parser</strong>: How the model is to be parsed and visualized. There are several options for this parameter:</p>
+<li><p><strong>model</strong>: COBRA model to be visualized.</p></li>
+<li><p><strong>parser</strong>: How the model is to be parsed and visualized. There are several options for this parameter:</p>
 <blockquote>
 <div><ul class="simple">
-<li><em>Empty vector</em>: Default. Does not parse the model and plots all reactions and metabolites in a single graph. Not recommended for medium to large-size models.</li>
-<li><em>string</em>: One of two options. (1) A reaction or metabolite field (e.g. <code class="code docutils literal notranslate"><span class="pre">subsystem</span></code> or <code class="code docutils literal notranslate"><span class="pre">compartment</span></code>), in which case a subgraph will be drawn for each unique value associated with that field. (2) A path to a file specifying a previously drawn SAMMI map, in which case that map will be rendered.</li>
-<li><em>Cell array of strings</em>: List of reaction IDs to be plotted. A single graph will be plotted containing only the defined reactions.</li>
-<li><em>Parser structured array of length n</em>: A subgraph is plotted for each element of the array as defined in the previous section.</li>
+<li><p><em>Empty vector</em>: Default. Does not parse the model and plots all reactions and metabolites in a single graph. Not recommended for medium to large-size models.</p></li>
+<li><p><em>string</em>: One of two options. (1) A reaction or metabolite field (e.g. <code class="code docutils literal notranslate"><span class="pre">subsystem</span></code> or <code class="code docutils literal notranslate"><span class="pre">compartment</span></code>), in which case a subgraph will be drawn for each unique value associated with that field. (2) A path to a file specifying a previously drawn SAMMI map, in which case that map will be rendered.</p></li>
+<li><p><em>Cell array of strings</em>: List of reaction IDs to be plotted. A single graph will be plotted containing only the defined reactions.</p></li>
+<li><p><em>Parser structured array of length n</em>: A subgraph is plotted for each element of the array as defined in the previous section.</p></li>
 </ul>
 </div></blockquote>
 </li>
-<li><p class="first"><strong>data</strong>: Data structured array of length <code class="code docutils literal notranslate"><span class="pre">n</span></code>. All defined datasets and data types will be mapped as described in the previous section.</p>
-</li>
-<li><p class="first"><strong>secondaries</strong>: Cell array of strings or regular expressions. Any metabolite, in any subgraph, matching any of the regular expressions defined here will be shelved. These metabolites are not deleted and can be returned to the graph through the floating menu window. For details of this functionality please refer to the SAMMI documentation.</p>
-</li>
-<li><p class="first"><strong>options</strong>: Options structured array as defined in the previous section. Additional options for loading the map.</p>
-</li>
+<li><p><strong>data</strong>: Data structured array of length <code class="code docutils literal notranslate"><span class="pre">n</span></code>. All defined datasets and data types will be mapped as described in the previous section.</p></li>
+<li><p><strong>secondaries</strong>: Cell array of strings or regular expressions. Any metabolite, in any subgraph, matching any of the regular expressions defined here will be shelved. These metabolites are not deleted and can be returned to the graph through the floating menu window. For details of this functionality please refer to the SAMMI documentation.</p></li>
+<li><p><strong>options</strong>: Options structured array as defined in the previous section. Additional options for loading the map.</p></li>
 </ul>
 </div>
 <div class="section" id="opening-a-visualization">

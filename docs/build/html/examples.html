@@ -21,9 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -183,7 +184,7 @@
 <div class="section" id="divide-the-model-into-subgraphs-using-model-annotation">
 <h2>1-2. Divide the model into subgraphs using model annotation<a class="headerlink" href="#divide-the-model-into-subgraphs-using-model-annotation" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li>Maps can be divided into subgraphs using model annotation. For instance, users can plot a subgraph for each annotated reaction subsystem:</li>
+<li><p>Maps can be divided into subgraphs using model annotation. For instance, users can plot a subgraph for each annotated reaction subsystem:</p></li>
 </ol>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%Load model</span>
 <span class="n">load</span><span class="p">([</span><span class="n">CBTDIR</span> <span class="s">&#39;/test/models/mat/Recon2.v04.mat&#39;</span><span class="p">])</span>
@@ -192,7 +193,7 @@
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
-<li>Or plot a map for each cellular compartment:</li>
+<li><p>Or plot a map for each cellular compartment:</p></li>
 </ol>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%Get sample model to plot</span>
 <span class="n">load</span><span class="p">([</span><span class="n">CBTDIR</span> <span class="s">&#39;/test/models/mat/ecoli_core_model.mat&#39;</span><span class="p">]);</span>
@@ -279,7 +280,7 @@
 <div class="section" id="data-mapping">
 <h2>7-8. Data mapping<a class="headerlink" href="#data-mapping" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple" start="7">
-<li>Add data to plotted subgraphs. In this example we are generating random data and mapping it onto the desired reactions. Using the Parser structured array users can directly map data as reaction colors:</li>
+<li><p>Add data to plotted subgraphs. In this example we are generating random data and mapping it onto the desired reactions. Using the Parser structured array users can directly map data as reaction colors:</p></li>
 </ol>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%Load model</span>
 <span class="n">load</span><span class="p">([</span><span class="n">CBTDIR</span> <span class="s">&#39;/test/models/mat/ecoli_core_model.mat&#39;</span><span class="p">])</span>
@@ -298,7 +299,7 @@
 </pre></div>
 </div>
 <ol class="arabic simple" start="8">
-<li>Alternatively, users can map data onto the map using the Data structured array. The following example maps five sets of random data, each in a different way, with five conditions each.</li>
+<li><p>Alternatively, users can map data onto the map using the Data structured array. The following example maps five sets of random data, each in a different way, with five conditions each.</p></li>
 </ol>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%Load model</span>
 <span class="n">load</span><span class="p">([</span><span class="n">CBTDIR</span> <span class="s">&#39;/test/models/mat/ecoli_core_model.mat&#39;</span><span class="p">])</span>
